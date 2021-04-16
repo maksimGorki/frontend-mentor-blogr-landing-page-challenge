@@ -39,13 +39,11 @@ function App() {
           setShowConnectMenu(false);
         }
       }
-      console.log(event.target.id);
     };
     document.addEventListener("mouseup", handleClickOutside);
 
     // Unbind the event listener on clean up
     return () => {
-      console.log("remove event listener");
       document.removeEventListener("mouseup", handleClickOutside);
     };
   }, [ref]);
@@ -149,7 +147,9 @@ function App() {
           >
             product
             <ArrowLight
-              className={`${showProductMenu ? "openMenu" : "closeMenu"}`}
+              className={`arrowLight ${
+                showProductMenu ? "openMenu" : "closeMenu"
+              }`}
             />
             {showProductMenu && (
               <div className="dropMenu">

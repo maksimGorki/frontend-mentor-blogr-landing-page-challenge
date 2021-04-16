@@ -280,6 +280,10 @@
   margin-left: 0.5rem;
 }
 
+.navBarItem:hover .arrowLight {
+  transform: translate(180deg);
+}
+
 .openMenu {
   margin-left: 0.5rem;
   transform: rotate(180deg);
